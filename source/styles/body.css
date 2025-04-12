@@ -1,0 +1,420 @@
+/* .body-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.carousel {
+    grid-column: 4/10;
+} */
+body {
+  font-family: 'Arial', sans-serif !important;
+  color: #333;
+}
+.body-grid {
+    display: grid;
+    margin-top: 10px;
+    grid-template-columns: 1fr minmax(300px, 900px) 1fr; /* Боковые колонки гибкие, центральная фиксированная */
+    gap: 16px; /* Зазор между колонками */
+}
+
+.carousel {
+    grid-column: 2; /* Центрируем карусель в центральной колонке */
+}
+
+.carousel-indicators [data-bs-target] {
+    background-color: black; /* Цвет индикаторов */
+    border: none; /* Убираем рамку, если она есть */
+}
+
+.carousel-indicators .active {
+    background-color: #007bff; /* Цвет активного индикатора (например, синий) */
+}
+
+
+.carousel-inner img {
+    max-width: 100%; /* Убедимся, что изображения остаются адаптивными */
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .body-grid {
+        grid-template-columns: 0.5fr minmax(300px, 900px) 0.5fr; /* Уменьшаем боковые колонки для меньших экранов */
+    }
+
+    .carousel-inner {
+      text-align: center;
+  }
+
+    .carousel-inner img {
+      max-width: 70%; /* Убедимся, что изображения остаются адаптивными */
+      height: auto;
+  }
+}
+
+@media (max-width: 576px) {
+    .body-grid {
+        grid-template-columns: 0.2fr minmax(300px, 900px) 0.2fr; /* Ещё меньше боковые колонки */
+    }
+    .carousel-inner img {
+        width: 80%; /* Уменьшаем ширину изображения до 80% */
+        margin: 0 auto; /* Центрируем изображение */
+    }
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.568); /* Черный цвет стрелок */
+    border: none;
+    border-radius: 20%; /* Округлённые стрелки (по желанию) */
+}
+
+/* Увеличиваем текст */
+.carousel-inner p {
+    font-size: 1.2rem; /* Увеличиваем текст в колонке */
+    line-height: 1.5; /* Делаем текст читабельным */
+}
+
+.slide-text {
+    margin: auto auto;
+    text-align: justify;
+}
+.slide-text .h-kar {
+    text-align: center;
+}
+
+
+
+
+
+ .footer {
+    background-color: rgba(43, 48, 53, 1); /* Светлый фон подвала */
+    padding: 20px 20px; /* Внутренние отступы */
+    color: antiquewhite; /* Цвет текста */
+    font-size: 14px;
+  }
+  
+  
+
+  .footer-logo {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .footer-logo-img {
+    max-width: 100px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    /* padding-left: 150px; */
+  }
+  /* .footer-links h3 {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    padding-left: -55px;
+  } */
+  
+  .footer-links li {
+    margin: 5px 0;
+  }
+  
+  .footer-links a {
+    color: antiquewhite;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .footer-links a:hover {
+    color: rgb(192, 124, 35); /* Синий при наведении */
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 0px;
+    font-size: 12px;
+    color: antiquewhite;
+  }
+  
+  .footer-bottom a {
+    color: #86b5e7;
+    text-decoration: none;
+  }
+  
+  .footer-bottom a:hover {
+    text-decoration: underline;
+  }
+
+  .number a {
+    color: #7f9ddf;
+  }
+  .number a:hover {
+    color: rgb(192, 124, 35);
+  }
+
+  .navigation {
+    margin: auto auto;
+  }
+
+   .number {
+    margin: auto auto;
+   }
+  
+
+  /* Адаптивность для небольших экранов */
+  @media (max-width: 768px) {
+    .footer {
+      text-align: center;
+    }
+    
+    .footer .row > div {
+      margin-bottom: 20px;
+    }
+  }
+
+  @media (max-width: 998px) {
+    .footer {
+        flex-direction: column; /* Колонки располагаются одна под другой */
+    }
+
+    .navigation {
+        order: 1; /* Первая колонка */
+    }
+
+    .number {
+        order: 2; /* Вторая колонка */
+    }
+
+    .map {
+        order: 3; /* Последняя колонка */
+    }
+}
+
+
+
+.partner {
+  display: flex;
+  justify-content: center;
+  margin: 2em;
+  flex-wrap: wrap; /* Обеспечивает перенос карточек на новые строки */
+}
+
+.partner .card {
+  margin-inline: 1em;
+  margin: auto auto;
+  border: none;
+  width: 18rem; /* Сохраняем ширину карточек */
+  
+}
+
+
+.partner-name {
+  margin-top: 2em;
+  font-size: 2.2rem;
+  text-align: center;
+}
+
+/* Медиа-запрос для экранов шириной до 768px (планшеты и телефоны) */
+@media (max-width: 768px) {
+  .partner {
+    justify-content: space-around; /* Размещаем карточки равномерно */
+  }
+}
+
+/* Медиа-запрос для экранов шириной до 576px (телефоны) */
+@media (max-width: 643px) {
+  .partner {
+    justify-content: space-around; /* Центрируем карточки */
+  }
+  .partner .card {
+    flex: 0 0 calc(50% - 1em); /* Две карточки в ряд с учетом отступов */
+    margin: auto 0.5; /* Уменьшаем отступы между карточками */
+  }
+}
+
+
+.body-grid2 {
+  display: grid;
+  margin-top: 10px;
+  grid-template-columns: 1fr minmax(auto, 1400px) 1fr; /* Боковые колонки гибкие, центральная фиксированная */
+  gap: 16px; /* Зазор между колонками */
+}
+.team {
+  grid-column: 2; /* Центрируем карусель в центральной колонке */
+}
+
+.team h2{
+  text-align: center;
+}
+
+.team2 {
+  display: grid;
+  margin-top: 3em;
+  margin-bottom: 3em;
+  grid-template-columns: minmax(auto, 800px) minmax(auto, 420px); /* Боковые колонки гибкие, центральная фиксированная */
+  gap: 40px;
+}
+
+.team-text p{
+  font-size: 20px;
+  text-align: justify;
+}
+
+.team-text {
+  margin: auto auto;
+  margin-left: 10px;
+}
+
+.team3 {
+  grid-column: 2; /* Центрируем карусель в центральной колонке */
+}
+
+.team3 {
+  display: flex;
+  justify-content: center; /* Центрирование */
+}
+
+.team3 img {
+  max-width: 100%; /* Ограничивает ширину изображения контейнером */
+  height: auto; /* Сохраняет пропорции */
+  object-fit: contain; /* Гарантирует, что изображение не обрезается */
+  display: block; /* Убирает лишние пробелы вокруг изображения */
+  border-radius: 10px; /* Закругленные углы (по желанию) */
+}
+
+
+
+  .team3 img {
+    max-width: 80%; /* Немного уменьшаем изображение */
+    margin: 0 auto; /* Центрируем */
+  }
+
+
+  @media (max-width: 1000px) {
+    .team2 {
+      display: flex;
+      flex-direction: column; /* Элементы выстраиваются в столбик */
+      text-align: center;
+      padding: 0 20px; /* Немного добавим отступы */
+    }
+  
+    .team-text {
+      margin: 0;
+      padding: 0;
+      order: 2; /* Текст будет вторым */
+    }
+  
+    .team3 {
+      display: block;
+      width: 100%;
+      margin: 0 auto;
+      order: 1; /* Картинка будет первой */
+    }
+  
+    .team3 img {
+      width: 40%; /* Изображение адаптируется по ширине */
+      max-width: 100%;
+      height: auto; /* Сохраняются пропорции */
+    }
+  }
+  
+
+  @media (max-width: 650px) {
+    .team3 img {
+      width: 60%; /* Изображение адаптируется по ширине */
+      max-width: 100%;
+      height: auto; /* Сохраняются пропорции */
+  }
+
+  .n1 {
+    display: none; /* Скрывает абзацы с классом .n1 на экранах до 768px */
+  }
+}
+
+.card1 {
+  display: flex;
+  align-items: center; /* Центрирование по вертикали */
+  justify-content: center; /* Центрирование по горизонтали */
+}
+
+.card1 img {
+  width: 80%; /* Сделает изображение больше, растягивая его на всю доступную ширину */
+  height: auto; /* Сохранение пропорций */
+  max-width: 150px; /* Можно задать максимальный размер */
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center; /* Центрируем карточки */
+  gap: 20px; /* Расстояние между карточками */
+  flex-wrap: wrap; /* Чтобы карточки переносились на новую строку при узком экране */
+  margin-bottom: 20px ;
+}
+
+.card {
+  max-width: 340px; /* Ограничиваем ширину */
+  width: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Анимация */
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.05); /* Поднимаем карточку и увеличиваем */
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15); /* Добавляем тень */
+}
+
+.card1 img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover .card1 img {
+  transform: scale(1.1); /* Увеличиваем изображение при наведении */
+}
+
+
+
+
+
+.portfolio-section {
+  background-color: #ffffff;
+  padding: 60px 15px;
+  border-radius: 20px;
+}
+
+.portfolio-img {
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.portfolio-img:hover {
+  transform: scale(1.05);
+}
+
+/* Убираем перекрытие кнопками */
+.carousel-control-prev,
+.carousel-control-next {
+  width: auto;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-size: 60% 60%;
+}
+
+/* Адаптация под мобильные устройства */
+@media (max-width: 768px) {
+  .portfolio-img {
+    height: 180px;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    display: none;
+  }
+}

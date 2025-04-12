@@ -1,0 +1,48 @@
+.align-items-center{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    
+    background-color: rgb(255, 255, 255);
+    
+    
+}
+
+.text-start {
+    grid-column: 1/2;
+    justify-self: left;
+    padding-left: 20px;
+    width: 100%; /* Гарантирует, что каждый бокс занимает всю ширину своей колонки */
+}
+
+.text-center {
+    grid-column: 2/3;
+    justify-self: center;
+    width: 100%; /* Гарантирует, что каждый бокс занимает всю ширину своей колонки */
+    padding-inline: 0;
+}
+
+.text-end {
+    grid-column: 3/4;
+    justify-self: right;
+    width: 100%; /* Гарантирует, что каждый бокс занимает всю ширину своей колонки */
+}
+
+@media (max-width: 630px) {
+    header .text-center {
+        display: none; /* Убираем центральную колонку на маленьких экранах */
+    }
+}
+
+.py-2>.align-items-center a:hover {
+    color: #c78814; /* Цвет при наведении */
+  }
+  
+  /* .social-links {
+    justify-content: right;
+  }
+  .contact-numbers {
+    display: flex;
+    text-align: center !important; 
+  }
+   */
+  

@@ -1,0 +1,78 @@
+/* Анимация появления */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+  
+  /* Применяем анимацию ко всем блокам */
+  .body-grid, .partner, .body-grid2, .cards-container, .container {
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+  }
+  
+  /* Добавляем задержку для более плавного эффекта */
+  .partner { animation-delay: 0.3s; }
+  .body-grid2 { animation-delay: 0.5s; }
+  .cards-container { animation-delay: 0.7s; }
+  .container { animation-delay: 0.9s; }
+
+
+
+/* Фон с градиентом */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+/* Контейнер заголовка */
+.hero-container {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero-title {
+    font-size: 40px;
+    font-weight: bold;
+    color: #4a3f35;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.hero-subtitle {
+    font-size: 20px;
+    color: #6d6258;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Кнопка с анимацией */
+.hero-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 14px 24px;
+    background: #c09967;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+    animation: fadeIn 1.8s ease-in-out;
+}
+
+.hero-btn:hover {
+    background: #a87d4b;
+    transform: scale(1.05);
+}
+
+/* Плавный скролл */
+html {
+    scroll-behavior: smooth;
+}

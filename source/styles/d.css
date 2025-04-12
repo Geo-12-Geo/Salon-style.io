@@ -1,0 +1,44 @@
+header p {
+    font-size: 16px; /* Уменьшенный размер шрифта */
+    margin: 0; /* Убираем лишние отступы */
+  }
+  
+  /* Социальные сети */
+  header a {
+    text-decoration: none; /* Убираем подчеркивание */
+    color: #dd7311; /* Цвет текста */
+  }
+  
+  header a:hover {
+    color: #007bff; /* Цвет при наведении */
+  }
+
+  .text-end {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.text-end p {
+    margin: 0;
+    margin-right: 10px; /* Отступ между текстом и первой иконкой */
+    font-size: 18px; /* Настраиваем размер текста */
+
+}
+.py-2 {
+    display: flex !important;
+    flex-wrap: wrap; /* Чтобы элементы переходили на новую строку при нехватке места */
+    justify-content: space-between; /* Распределение пространства между колонками */
+    
+}
+@media (max-width: 1000px) {
+    header .text-center {
+        display: none; /* Убираем центральную колонку на маленьких экранах */
+    }
+}
+
+@media (max-width: 800px) {
+    header .text-start {
+        display: none; /* Убираем центральную колонку на маленьких экранах */
+    }
+}

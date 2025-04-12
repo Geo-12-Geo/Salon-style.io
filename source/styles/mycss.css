@@ -1,0 +1,106 @@
+
+
+.nav-link {
+    color:antiquewhite ;
+}
+
+.navbar-nav .nav-link.active {
+    color:rgb(184, 155, 117) ;
+}
+
+.navbar-nav .nav-link:hover {
+    color:rgb(192, 124, 35) ;
+}
+.align-items-center img {
+    width: 75px;
+    margin-left: 10px;
+    
+}
+
+.navbar-nav {
+    margin: 0 auto; /* Центрирование по горизонтали */
+    display: flex; /* Чтобы элементы стали флекс-элементами */
+    justify-content: center; /* Выравнивание по центру */
+    
+}
+
+.nav-item {
+    margin: 0 10px; /* Опционально: отступы между ссылками */
+}
+
+.navbar-nav2 {
+    display: none;
+}
+
+@media (max-width: 991px) {
+        .navbar-nav2 {
+            display: block;
+            list-style: none;
+            padding-left: 10px;
+        }
+
+        .navbar-nav2:hover {
+            color: rgb(192, 124, 35);
+        }
+
+        .navbar-nav2 p {
+            padding-top: 5px;
+            color: rgb(192, 124, 35);
+        }
+    }
+
+.text-end {
+    display: flex;
+    justify-content: space-between; /* Пространство между номерами и соцсетями */
+    align-items: center; /* Выравнивание по вертикали */
+    text-align: center !important;
+    padding: 0px 20px; /* Внутренние отступы для контейнера */
+   
+}
+
+.contact-numbers {
+    display: flex; /* Flexbox для размещения ссылок в столбик */
+    flex-direction: column; /* Вертикальное расположение */
+    width: 100%;
+    
+}
+
+.contact-numbers a {
+    text-decoration: none; /* Убираем подчеркивание у ссылок */
+    color: #000000; /* Цвет текста */
+    margin-bottom: 5px; /* Отступ между ссылками */
+    font-size: 14px; /* Размер текста */
+    transition: color 0.3s; /* Анимация при наведении */
+}
+
+.social-links {
+    display: flex; /* Flexbox для размещения иконок в строку */
+    align-items: center; /* Центрируем по вертикали */
+    width: 100%;
+}
+
+.social-links p {
+    margin: 0; /* Убираем стандартный отступ */
+    margin-right: 10px; /* Отступ справа от текста "Найдите нас в:" */
+    font-size: 16px; /* Размер текста */
+    color: #000000; /* Цвет текста */
+}
+
+.social-links a {
+    display: inline-flex; /* Inline-иконки */
+    margin-right: 5px; /* Отступ между иконками */
+    transition: color 0.3s; /* Анимация при наведении */
+    color: #14ac28; /* Цвет иконок */
+}
+
+@media (max-width: 1000px) {
+    .contact-numbers {
+        display: none;
+    }
+    .social-links {
+    display: flex; /* Flexbox для размещения иконок в строку */
+    justify-content: right;
+    width: 100%;
+    }
+
+}
