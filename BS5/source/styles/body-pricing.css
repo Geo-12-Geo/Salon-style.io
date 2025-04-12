@@ -1,0 +1,152 @@
+.prices-container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.section-title {
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.prices-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.price-card {
+    background: #f8f3ec;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    transition: 0.3s ease-in-out;
+}
+
+.price-card img {
+    width: 60px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.price-card h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.price-card:hover {
+    background: #e4d6c5;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    transform: scale(1.05);
+}
+
+.price-card:hover img {
+    transform: scale(1.1);
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 768px) {
+    .prices-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* Фон с градиентом */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+/* Контейнер заголовка */
+.hero-container {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero-title {
+    font-size: 40px;
+    font-weight: bold;
+    color: #4a3f35;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.hero-subtitle {
+    font-size: 20px;
+    color: #6d6258;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Кнопка с анимацией */
+.hero-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 14px 24px;
+    background: #c09967;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+    animation: fadeIn 1.8s ease-in-out;
+}
+
+.hero-btn:hover {
+    background: #a87d4b;
+    transform: scale(1.05);
+}
+
+/* Плавный скролл */
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Анимация появления */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Применяем анимацию к карточкам */
+.section-title {
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out forwards;
+}
+.price-card {
+    background: #f8f3ec;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    transition: 0.3s ease-in-out;
+    
+    /* Анимация появления */
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* Задержка для плавного появления карточек одна за другой */
+.price-card:nth-child(1) { animation-delay: 0.2s; }
+.price-card:nth-child(2) { animation-delay: 0.4s; }
+.price-card:nth-child(3) { animation-delay: 0.6s; }
+.price-card:nth-child(4) { animation-delay: 0.8s; }
