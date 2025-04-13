@@ -81,6 +81,17 @@
     font-weight: bold;
 }
 
+.studio-details a[href^="tel"] {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .studio-details a[href^="tel"]:hover {
+    color: #c09967; 
+    text-decoration: underline;
+  }
+
 /* Адаптация для мобильных */
 @media (min-width: 768px) {
     .studio-container {
