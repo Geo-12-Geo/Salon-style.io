@@ -256,11 +256,18 @@ body {
   margin-bottom: 3em;
   grid-template-columns: minmax(auto, 800px) minmax(auto, 420px); /* Боковые колонки гибкие, центральная фиксированная */
   gap: 40px;
+  align-items: center;
 }
 
 .team-text p{
   font-size: 20px;
   text-align: justify;
+  margin: 0; /* убираем стандартный внешний отступ */
+  padding-bottom: 1em; /* добавим нижний отступ вместо margin */
+}
+
+.team-text p:last-child {
+  padding-bottom: 0; /* чтобы последний абзац не имел лишнего отступа */
 }
 
 .team-text {
