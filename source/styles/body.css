@@ -12,7 +12,7 @@ body {
 }
 .body-grid {
     display: grid;
-    margin-top: 10px;
+    margin-top: 0px;
     grid-template-columns: 1fr minmax(300px, 900px) 1fr; /* Боковые колонки гибкие, центральная фиксированная */
     gap: 16px; /* Зазор между колонками */
 }
@@ -238,7 +238,7 @@ body {
 
 .body-grid2 {
   display: grid;
-  margin-top: 0px;
+  margin-top: 10px;
   grid-template-columns: 1fr minmax(auto, 1400px) 1fr; /* Боковые колонки гибкие, центральная фиксированная */
   gap: 16px; /* Зазор между колонками */
 }
