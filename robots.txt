@@ -1,4 +1,3 @@
 User-agent: *
-Disallow: /private/
-Allow: /public/
+Allow: /
 Sitemap: https://stromynka-style.ru/sitemap.xml
