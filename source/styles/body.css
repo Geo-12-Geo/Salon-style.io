@@ -10,6 +10,11 @@ body {
   font-family: 'Arial', sans-serif !important;
   color: #333;
 }
+
+h2 {
+  font-size: 32px !important; 
+}
+
 .body-grid {
     display: grid;
     margin-top: 0px;
@@ -82,7 +87,9 @@ body {
     text-align: center;
 }
 
-
+.h-kar {
+  margin-bottom: 20px;
+}
 
 
 
